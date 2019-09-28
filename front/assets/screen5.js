@@ -65,7 +65,7 @@
       pieChart  : [
         {
           color       : 'red',
-          description : 'Of people in your area take a flu shot before an outbreak',
+          description : 'More infected people in your network compared to last month',
           title       : 'flowers',
           value       : 0.46
         },
