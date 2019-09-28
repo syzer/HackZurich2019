@@ -17,6 +17,19 @@
         script: []
       }
     },
+    data() {
+      const style = {
+        red: '#EE0000',
+        orange: '#FF6600',
+        yellow: '#F6AD2B',
+        green: '#60AD08',
+        gray: '#CFCAC7'
+      }
+
+      return {
+        style
+      }
+    },
     mounted() {
       // const socket = io()
       const imgDir = 'img/'
@@ -52,18 +65,18 @@
         const status = statuses.find(e => e.name === name)
 
         if (!status) {
-          return style.gray
+          return this.style.gray
         }
         if (between(status.score, 0.9, 1)) {
-          return style.green
+          return this.style.green
         }
         if (between(status.score, 0.5, 0.9)) {
-          return style.yellow
+          return this.style.yellow
         }
         if (between(status.score, 0.3, 0.5)) {
-          return style.orange
+          return this.style.orange
         }
-        return style.red
+        return this.style.red
       }
 
       const updateGraph = (statuses) => [
@@ -81,10 +94,16 @@
         //   res(statuses)
         //   updateGraph(statuses)
         // })
-        // updateGraph()
         res([
-          // TODO
-        ])
+          { score: 0.07407407407407407, name: 'tris' },
+          { score: 0.2, name: 'ivan' },
+          { score: 1, name: 'tony' },
+          { score: 0.5, name: 'Attila Zimmermann' },
+          { score: 0, name: 'Recommender' },
+          { score: 0, name: 'It department' },
+          { score: 0.35714285714285715, name: 'eliza' },
+          { score: 0.3333333333333333, name: 'maria' }
+          ])
       })
 
       const getGraphData = () => new Promise((res, rej) =>
@@ -177,36 +196,37 @@
             d3.select(this).classed('active', false)
           })
 
-        node.append('image')
+        node.append('svg:image')
           .attr('xlink:href', d => d.icon ? `${imgDir}${d.icon}` : 'favicon.ico')
           .attr('x', -15)
-          .attr('y', -10)
-          .attr('width', 29)
-          .attr('height', 29)
+          .attr('y', -20)
+          .attr('width', 50)
+          .attr('height', 50)
 
         node.append('text')
-          .attr('dx', 30)
+          .attr('dx', 75)
           .attr('dy', nodeY / 2)
           .attr('class', 'name')
           .text(d => d.name)
 
-        // badge AKA pill
-        // See updateGraph()
-        node.append('rect')
-          .attr('class', 'status-pill')
-          .attr('x', 190)
-          .attr('y', -10)
-          .attr('rx', 10)
-          .attr('width', 110)
-          .attr('height', nodeY * 1.2)
-          .attr('opacity', 0.9)
-          .style('fill', style.gray)
-
-        node.append('text')
-          .attr('dx', 200)
-          .attr('dy', nodeY / 2)
-          .text(d => `${engHumanize(d.cacheTime)}`)
-          .attr('class', 'description')
+        // // badge AKA pill
+        // // See updateGraph()
+        // node.append('rect')
+        //   .attr('class', 'status-pill')
+        //   .attr('x', 190)
+        //   .attr('y', -10)
+        //   .attr('rx', 10)
+        //   .attr('width', 110)
+        //   .attr('height', nodeY * 1.2)
+        //   .attr('opacity', 0.9)
+        //   .style('fill', this.style.gray)
+        //
+        // node.append('text')
+        //   .attr('dx', 200)
+        //   .attr('dy', nodeY / 2)
+        //   // .text(d => `${engHumanize(d.cacheTime)}`)
+        //   .text(d => `666`)
+        //   .attr('class', 'description')
 
         force.on('tick', () => {
           link.attr('x1', d => d.source.x)
@@ -223,10 +243,7 @@
 </script>
 <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"-->
 <!--integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">-->
-<!--<link rel="stylesheet" type="text/css" href="/css/style.css">-->
 <!--<script src="js/socket.io.min.js"></script>-->
-<!--<script src="js/app/style.js"></script>-->
-
 <style>
   :root {
     --active-color: #c2751a;
@@ -254,6 +271,14 @@
     /*padding: 50px;*/
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
     background-color: var(--background-lighter);
+
+
+  }
+
+  .theme--dark.v-application {
+    /*background: #303030;*/
+    background: #F1EFEE;
+    color: #FFFFFF;
   }
 
   a {

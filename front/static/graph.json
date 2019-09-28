@@ -43,13 +43,13 @@
       "cacheTime": 120000
     },
     {
-      "name": "Harald",
-      "endpointName": "harald",
+      "name": "Attila Zimmermann",
+      "endpointName": "attila",
       "group": 1,
       "x": 100,
       "y": 150,
       "cacheTime": 86400000,
-      "icon": "icon-m-api.svg"
+      "icon": "attila.jpg"
     },
     {
       "name": "Recommender",
@@ -66,8 +66,8 @@
       "cacheTime": 0
     },
     {
-      "name": "ProductsBundle",
-      "endpointName": "noname",
+      "name": "Eliza",
+      "endpointName": "eliza",
       "group": 1,
       "x": 160,
       "y": 120,
@@ -75,8 +75,8 @@
       "icon": "icon-frapi.svg"
     },
     {
-      "name": "SdkBundle",
-      "endpointName": "noname",
+      "name": "Maria",
+      "endpointName": "maria",
       "group": 1,
       "x": 190,
       "y": 120,
