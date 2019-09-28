@@ -14,8 +14,8 @@
             src="img/infograph1.png"
             aspect-ratio="2" 
           ></v-img>
-
-          <v-btn large >Send</v-btn>
+<!-- 
+          <v-btn large >Send</v-btn> -->
         </v-col>
       </v-row>
 
