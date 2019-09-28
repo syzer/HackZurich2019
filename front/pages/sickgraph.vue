@@ -38,8 +38,8 @@
       const height = w.innerHeight
       const nodeY = 30
       const layout = {
-        linkDistance: 120,
-        charge: -200
+        linkDistance: 90,
+        charge: -100
       }
 
       const svg = d3.select('#graph').append('svg')
@@ -99,11 +99,11 @@
           { score: 0.5, name: 'Attila Zimmermann' },
           { score: 0.1, name: 'Alexander Wood' },
           { score: 0.5, name: 'Eliza Zimmermann' },
-          { score: 1, name: 'Walter Northshire' },
-          { score: 1, name: 'Claudio Peters' },
           { score: 0.07407407407407407, name: 'tris' },
           { score: 0.2, name: 'ivan' },
           { score: 1, name: 'tony' },
+
+          { score: 0, name: 'It department' },
           { score: 0.35714285714285715, name: 'eliza' },
           { score: 0.3333333333333333, name: 'maria' }
           ])
@@ -189,8 +189,7 @@
           .attr('x', -20)
           .attr('y', -nodeY / 2 - 15)
           .attr('rx', 6)
-          // .attr('width', 270)
-          .attr('width', 150) // just first name
+          .attr('width', 270)
           .attr('height', 70)
           .attr('opacity', 1)
           .on('mouseover', function () {
@@ -211,8 +210,7 @@
           .attr('dx', 40)
           .attr('dy', nodeY / 2)
           .attr('class', 'name')
-          // .text(d => d.name)
-          .text(d => d.name.split(' ')[0]) // just first name
+          .text(d => d.name)
 
         force.on('tick', () => {
           link.attr('x1', d => d.source.x)
