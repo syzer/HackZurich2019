@@ -1176,8 +1176,6 @@
     h1 {
         font-family: Roboto, sans-serif;
     }
-
-    ;
     .leaflet-control-container .leaflet-routing-container-hide {
         display: none;
     }
