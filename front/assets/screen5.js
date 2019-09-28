@@ -2,54 +2,64 @@
     var data = {
       lineChart : [
         {
-          date  : '2006-02-22',
+          date  : '2019-01-01',
           label : 'foo',
-          value : 950
+          value : 13
         },
         {
-          date  : '2006-08-22',
+            date  : '2019-02-01',
           label : 'bar',
-          value : 1000
+          value : 15
         },
         {
-          date  : '2007-01-11',
+            date  : '2019-03-01',
           label : 'baz',
-          value : 700
+          value : 12
         },
         {
-          date  : '2008-10-01',
+            date  : '2019-04-01',
           label : 'boing',
-          value : 534
+          value : 09
         },
         {
-          date  : '2009-02-24',
+            date  : '2019-05-01',
           label : 'loool',
-          value : 1423
+          value : 06
         },
         {
-          date  : '2010-12-30',
+            date  : '2019-06-01',
           label : 'YEAH',
-          value : 1222
+          value : 03
         },
         {
-          date  : '2011-05-15',
+            date  : '2019-07-01',
           label : 'Hurray',
-          value : 948
+          value : 01
         },
         {
-          date  : '2012-04-02',
+            date  : '2019-08-01',
           label : 'WTF',
-          value : 1938
+          value : 01
         },
         {
-          date  : '2013-08-19',
+            date  : '2019-09-01',
           label : 'OMG',
-          value : 1245
+          value : 04
         },
         {
-          date  : '2013-11-11',
+            date  : '2019-10-01',
           label : 'ROFL',
-          value : 888
+          value : 08
+        },
+        {
+            date  : '2019-11-01',
+          label : 'ROFL',
+          value : 12
+        },
+        {
+            date  : '2019-12-01',
+          label : 'ROFL',
+          value : 12
         }
       ],
       pieChart  : [
@@ -88,10 +98,11 @@
       } );
       
       // TODO code duplication check how you can avoid that
+ 
       var containerEl = document.getElementById( elementId ),
           width       = containerEl.clientWidth,
-          height      = width * 0.4,
-          margin      = {
+          height      = width * 0.4;
+          var  margin      = {
             top    : 30,
             right  : 10,
             left   : 10 
@@ -108,7 +119,7 @@
   
           x          = d3.time.scale().range( [ 0, width - detailWidth ] ),
           xAxis      = d3.svg.axis().scale( x )
-                                    .ticks ( 8 )
+                                    .ticks ( 2 )
                                     .tickSize( -height ),
           xAxisTicks = d3.svg.axis().scale( x )
                                     .ticks( 16 )
@@ -140,11 +151,12 @@
                       } ),
           
           circleContainer;
+
   
       // Compute the minimum and maximum date, and the maximum price.
       x.domain( [ data[ 0 ].date, data[ data.length - 1 ].date ] );
       // hacky hacky hacky :(
-      y.domain( [ 0, d3.max( data, function( d ) { return d.value; } ) + 700 ] );
+      y.domain( [ 0, d3.max( data, function( d ) { return d.value; } ) +30 ] ); //TONY changed +100 to +30
   
       svg.append( 'g' ) 
           .attr( 'class', 'lineChart--xAxisTicks' )
@@ -411,7 +423,7 @@
                                       .attr( 'width', infoWidth )
                                       .attr(
                                         'transform',
-                                        'translate(' + 0 + ',' + ( bBox.height + bBox.y ) + ')'
+                                        'translate(' + 0 + ',' + ( bBox.height + bBox.y +30 ) + ')'
                                       );
           anchor   = 'start';
           position = 'left';
