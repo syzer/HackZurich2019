@@ -1,38 +1,38 @@
 {
   "nodes": [
     {
-      "name": "Me",
+      "name": "Lukas Gintowt",
       "group": 1,
-      "x": 80,
-      "y": 100,
+      "x": 100,
+      "y": 120,
       "cacheTime": 600000,
-      "icon": "icon-browser.svg"
+      "icon": "lukasz_gintowt.jpg"
     },
     {
-      "name": "Tris",
-      "endpointName": "tris",
+      "name": "Alex Wood",
+      "endpointName": "alaxander_wood",
       "group": 1,
       "x": 100,
       "y": 120,
       "cacheTime": 300000,
-      "icon": "icon-produkte.svg"
+      "icon": "alexander_wood.jpg"
     },
     {
-      "name": "Lukas",
+      "name": "Eliza Zimmermann",
       "group": 1,
       "x": 100,
       "y": 130,
       "cacheTime": 0,
-      "icon": "icon-web-api.svg"
+      "icon": "eliza_zimmermann.jpg"
     },
     {
-      "name": "Ivan",
-      "endpointName": "ivan",
+      "name": "Matthias Ballazi",
+      "endpointName": "balazi",
       "group": 1,
       "x": 20,
       "y": 140,
       "cacheTime": 0,
-      "icon": "icon-m-api.svg"
+      "icon": "matthias_ballazi.jpg"
     },
     {
       "name": "Tony",
@@ -43,45 +43,45 @@
       "cacheTime": 120000
     },
     {
-      "name": "Harald",
-      "endpointName": "harald",
+      "name": "Attila Zimmermann",
+      "endpointName": "attila",
       "group": 1,
       "x": 100,
       "y": 150,
       "cacheTime": 86400000,
-      "icon": "icon-m-api.svg"
+      "icon": "attila.jpg"
     },
     {
-      "name": "Recommender",
+      "name": "Jeff",
       "group": 1,
       "x": 120,
       "y": 250,
       "cacheTime": 86400000
     },
     {
-      "name": "It department",
+      "name": "Coffe! department",
       "group": 1,
-      "x": 120,
-      "y": 450,
+      "x": 1200,
+      "y": 4500,
       "cacheTime": 0
     },
     {
-      "name": "ProductsBundle",
-      "endpointName": "noname",
+      "name": "Walter Northshire",
+      "endpointName": "walter_northshire",
       "group": 1,
       "x": 160,
       "y": 120,
       "cacheTime": 0,
-      "icon": "icon-frapi.svg"
+      "icon": "walter_northshire.jpg"
     },
     {
-      "name": "SdkBundle",
-      "endpointName": "noname",
+      "name": "Claudio Peters",
+      "endpointName": "claudio_peters",
       "group": 1,
       "x": 190,
       "y": 120,
       "cacheTime": 0,
-      "icon": "icon-frapi.svg"
+      "icon": "claudio_peters.jpg"
     }
   ],
   "links": [
