@@ -1,6 +1,28 @@
 <template>
     <!-- <h1>About page with jQuery and Roboto font</h1> -->
-    <div id="map" style="width: 360px; height: 400px;"></div>
+
+
+<v-layout>
+    <v-flex class="text-center">
+    <v-row align="center" justify="center">
+        <div id="map" style="width: 360px; height: 300px;"></div> 
+     </v-row>
+
+      <v-row align="center" >
+        <v-col class="text-center" cols="12" sm="4">
+          <v-img 
+            src="img/infograph1.png"
+            aspect-ratio="2" 
+          ></v-img>
+
+          <v-btn large >Send</v-btn>
+        </v-col>
+      </v-row>
+
+
+
+    </v-flex>
+  </v-layout>
 </template>
 
 <script>
@@ -64,14 +86,14 @@
                 {
                     name: 'Alexander Wood',
                     sick: '0.7',
-                    tweet: 'hot soup will do me good!',
+                    tweet: 'Hot soup will do me good!',
                     location: [47.3771, 8.5417],
                     iconurl: 'img/alexander_wood.jpg'
                 },
                 {
                     name: 'Adrian Steward',
                     sick: '0.9',
-                    tweet: 'Sick as dog!',
+                    tweet: 'Sick as a dog!',
                     location: [47.3751, 8.5317],
                     iconurl: 'img/adrian_steward.jpg'
                 },
@@ -1190,11 +1212,13 @@
             L.Routing.control({
                 waypoints: [
                     L.latLng(47.3769, 8.5417),
-                    L.latLng(47.3344, 7.3505)
+                    L.latLng( 47.546, 7.5965)
                 ]
             }).addTo(map);
         }
     }
+
+
 </script>
 
 <style scoped>
