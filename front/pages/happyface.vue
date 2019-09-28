@@ -11,16 +11,15 @@
         </v-col>
       </v-row>
 
-      <v-row align="center" v-if="showTraining">
+      <v-row align="center" v-if="isTrainigShown">
         <v-col class="text-center" cols="12" sm="4">
           <v-btn large color="primary" v-on:click="handleButton('0')" :disabled="notReady">Healthy</v-btn>
-          <!--<v-btn large color="primary" v-on:click="handleButton('0')" :disabled="notReady">Healthy</v-btn>-->
           <v-btn large color="secondary" v-on:click="handleButton('1')" :disabled="notReady">Sick</v-btn>
           <v-btn large color="error" v-on:click="handleButton('2')" :disabled="notReady">Dying</v-btn>
         </v-col>
       </v-row>
 
-      <v-row align="center" v-if="showTraining">
+      <v-row align="center" v-if="isTrainigShown">
         <v-col class="text-center" cols="12" sm="4">
           <div id="healthysamples">Healthy Samples: {{ healthysamples }}</div>
           <div id="sicksamples">Sick Samples: {{ sicksamples }}</div>
@@ -28,7 +27,7 @@
         </v-col>
       </v-row>
 
-      <v-row align="center" v-if="showTraining">
+      <v-row align="center" v-if="isTrainigShown">
         <v-col class="text-center" cols="12" sm="4">
           <v-btn large color="primary" v-on:click="train()" :disabled="notReady">Train Network</v-btn>
         </v-col>
@@ -42,10 +41,10 @@
       </v-row>
       <v-row>
         <v-col class="text-center" cols="12" sm="4">
-          <v-btn large color="primary" v-on:click="save()" :disabled="cantPredict" v-if="showTraining">
+          <v-btn large color="primary" v-on:click="save()" :disabled="cantPredict" v-if="isTrainigShown">
             Save
           </v-btn>
-          <v-btn large color="primary" v-on:click="save()" :disabled="cantPredict" v-if="!showTraining">
+          <v-btn large color="primary" v-on:click="showTraining()" v-if="!isTrainigShown">
             Show Training
           </v-btn>
           <v-btn large color="secondary" v-on:click="load()" :disabled="!cantPredict">
@@ -96,7 +95,7 @@
         isPredicting: false,
         predictionText: '',
         cantPredict: true,
-        showTraining: false
+        isTrainigShown: false
       }
     },
 
@@ -187,6 +186,9 @@
       save: async function () {
         await this.model.save(modelUrl)
         this.stopPredicting()
+      },
+      showTraining: function() {
+        this.isTrainigShown = true
       },
       load: async function () {
         this.model = await tf.loadLayersModel(modelUrl)

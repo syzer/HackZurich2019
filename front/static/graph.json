@@ -1,0 +1,134 @@
+{
+  "nodes": [
+    {
+      "name": "Me",
+      "group": 1,
+      "x": 80,
+      "y": 100,
+      "cacheTime": 600000,
+      "icon": "icon-browser.svg"
+    },
+    {
+      "name": "Tris",
+      "endpointName": "tris",
+      "group": 1,
+      "x": 100,
+      "y": 120,
+      "cacheTime": 300000,
+      "icon": "icon-produkte.svg"
+    },
+    {
+      "name": "Lukas",
+      "group": 1,
+      "x": 100,
+      "y": 130,
+      "cacheTime": 0,
+      "icon": "icon-web-api.svg"
+    },
+    {
+      "name": "Ivan",
+      "endpointName": "ivan",
+      "group": 1,
+      "x": 20,
+      "y": 140,
+      "cacheTime": 0,
+      "icon": "icon-m-api.svg"
+    },
+    {
+      "name": "Tony",
+      "endpointName": "tony",
+      "group": 1,
+      "x": 120,
+      "y": 160,
+      "cacheTime": 120000
+    },
+    {
+      "name": "Harald",
+      "endpointName": "harald",
+      "group": 1,
+      "x": 100,
+      "y": 150,
+      "cacheTime": 86400000,
+      "icon": "icon-m-api.svg"
+    },
+    {
+      "name": "Recommender",
+      "group": 1,
+      "x": 120,
+      "y": 250,
+      "cacheTime": 86400000
+    },
+    {
+      "name": "It department",
+      "group": 1,
+      "x": 120,
+      "y": 450,
+      "cacheTime": 0
+    },
+    {
+      "name": "ProductsBundle",
+      "endpointName": "noname",
+      "group": 1,
+      "x": 160,
+      "y": 120,
+      "cacheTime": 0,
+      "icon": "icon-frapi.svg"
+    },
+    {
+      "name": "SdkBundle",
+      "endpointName": "noname",
+      "group": 1,
+      "x": 190,
+      "y": 120,
+      "cacheTime": 0,
+      "icon": "icon-frapi.svg"
+    }
+  ],
+  "links": [
+    {
+      "source": 1,
+      "target": 0,
+      "value": 360
+    },
+    {
+      "source": 2,
+      "target": 1,
+      "value": 160
+    },
+    {
+      "source": 3,
+      "target": 2,
+      "value": 160
+    },
+    {
+      "source": 4,
+      "target": 2,
+      "value": 160
+    },
+    {
+      "source": 5,
+      "target": 4,
+      "value": 60
+    },
+    {
+      "source": 6,
+      "target": 5,
+      "value": 6
+    },
+    {
+      "source": 8,
+      "target": 1,
+      "value": 1
+    },
+    {
+      "source": 8,
+      "target": 4,
+      "value": 1
+    },
+    {
+      "source": 9,
+      "target": 1,
+      "value": 1
+    }
+  ]
+}
