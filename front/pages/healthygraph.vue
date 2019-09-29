@@ -7,6 +7,22 @@
     </v-flex>
   </v-layout>
 </template>
+<!--<template>-->
+  <!--<v-layout>-->
+    <!--<v-flex class="text-center">-->
+      <!--<v-row align="center" justify="center">-->
+        <!--<v-img-->
+          <!--src="/rendered-d3-map.jpg"-->
+          <!--lazy-src="rendered-d3-map.jpg"-->
+          <!--aspect-ratio="0.3"-->
+          <!--class="grey lighten-2"-->
+          <!--max-width="500"-->
+          <!--max-height="620"-->
+        <!--&gt;</v-img>-->
+      <!--</v-row>-->
+    <!--</v-flex>-->
+  <!--</v-layout>-->
+<!--</template>-->
 <script>
   import * as d3 from 'd3'
 

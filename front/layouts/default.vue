@@ -69,7 +69,17 @@ export default {
           icon: 'mdi-chart-bubble',
           title: 'Sick Graph',
           to: '/sickgraph'
-        }
+        },
+        {
+          icon: 'mdi-clipboard-account',
+          title: 'Social map',
+          to: '/map'
+        },
+        {
+          icon: 'mdi-format-list-bulleted',
+          title: 'Impact map',
+          to: '/shirt'
+        },
       ],
       miniVariant: false,
       right: true,
