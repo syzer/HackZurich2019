@@ -1,5 +1,5 @@
 # Preventive Healthcare for Helsana task
-![Demo](data/HackZurich2019.gif.gif)
+![Demo](data/HackZurich2019.gif)
 
 # Data
 
